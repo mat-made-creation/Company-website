@@ -23,30 +23,18 @@ df = pd.read_csv("data.csv", sep=",")
 
 with col1:
     for index, row in df[:3].iterrows():
-        first_name = row["first name"]
-        first_name = first_name.capitalize()
-        last_name = row["last name"]
-        last_name = last_name.capitalize()
-        st.title(f"{first_name} {last_name}")
+        st.title(f"{row["first name"].title()} {row["last name"].title()}")
         st.write(row["role"])
         st.image("images/" + row["image"])
 
 with col2:
     for index, row in df[4:7].iterrows():
-        first_name = row["first name"]
-        first_name = first_name.capitalize()
-        last_name = row["last name"]
-        last_name = last_name.capitalize()
-        st.title(f"{first_name} {last_name}")
+        st.title(f"{row["first name"].title()} {row["last name"].title()}")
         st.write(row["role"])
         st.image("images/" + row["image"])
 
 with col3:
     for index, row in df[8:11].iterrows():
-        first_name = row["first name"]
-        first_name = first_name.capitalize()
-        last_name = row["last name"]
-        last_name = last_name.capitalize()
-        st.title(f"{first_name} {last_name}")
+        st.title(f"{row["first name"].title()} {row["last name"].title()}")
         st.write(row["role"])
         st.image("images/" + row["image"])
